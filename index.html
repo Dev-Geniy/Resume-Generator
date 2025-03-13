@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <button id="theme-toggle" aria-label="Toggle Theme">
+            <span class="icon">☀️</span>
+        </button>
+    </header>
+    <main class="container">
+        <h1>Resume Generator</h1>
+        <p>Create a modern resume with a sleek design. Download as HTML or PDF!</p>
+        
+        <div class="resume-generator">
+            <form id="resume-form" class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" placeholder="John Doe" required>
+
+                <label for="title">Job Title:</label>
+                <input type="text" id="title" placeholder="Software Engineer" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="john.doe@example.com" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" placeholder="+1234567890">
+
+                <label for="github">GitHub URL:</label>
+                <input type="url" id="github" placeholder="https://github.com/johndoe">
+
+                <label for="summary">Summary (2-3 sentences):</label>
+                <textarea id="summary" placeholder="Experienced developer with a passion for clean code..." required></textarea>
+
+                <label for="experience">Experience (format: Job Title | Company | Dates | Achievements, one per line):</label>
+                <textarea id="experience" placeholder="Developer | TechCorp | 2020-2023 | Built scalable apps"></textarea>
+
+                <label for="education">Education (format: Degree | Institution | Dates):</label>
+                <textarea id="education" placeholder="B.S. Computer Science | XYZ University | 2016-2020"></textarea>
+
+                <label for="skills">Skills (comma-separated):</label>
+                <input type="text" id="skills" placeholder="JavaScript, React, CSS">
+
+                <button type="submit" class="generate-btn">Generate Resume</button>
+            </form>
+            <div class="download-buttons" id="download-buttons" style="display: none;">
+                <button id="download-html">Download HTML</button>
+                <button id="download-instructions">Download Instructions</button>
+                <button id="download-pdf">Download PDF</button>
+            </div>
+        </div>
+        
+        <p>Want to see the code? Check it out on GitHub: <a href="https://github.com/example/resume-generator" target="_blank">https://github.com/example/resume-generator</a></p>
+        <p class="note">Note: Replace the link above with your own GitHub repository URL.</p>
+    </main>
+    
+    <footer class="footer">
+        <div class="social">
+            <img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter Icon" class="twitter-icon">
+            <div>
+                <a href="https://twitter.com/YourTwitterHandle" target="_blank">@YourTwitterHandle</a>
+                <p>I'm a code developer. Feel free to reach out!</p>
+            </div>
+        </div>
+        <div class="donation">
+            <h3>For voluntary donations</h3>
+            <div class="btc-address">
+                <span id="btc-code">1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa</span>
+                <button class="copy-btn" data-target="btc-code">Copy</button>
+            </div>
+            <p class="thanks">Thank you for your support!</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
